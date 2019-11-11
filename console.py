@@ -3,8 +3,7 @@
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
 from models import storage
-#import time
-#import shlex
+import time
 from models import theClasses
 import cmd
 
@@ -98,27 +97,7 @@ class HBNBCommand(cmd.Cmd):
         except:   
             print("** no instance found **")
         storage.save()
-    """
-    def do_all(self, args):
-        Prints all string representation of all instances
-        token = args.split()
 
-        try:
-            eval(token[0])
-        except:
-            print("** class doesn't exist **")
-        
-        newList = []
-        objDict = storage.all()
-
-        for key, val in objDict.items():
-            if len(args) != 0:
-                if type(val) is eval(val):
-                    newList.append(val)
-            else:
-                newList.append(val)
-        print(newList)
-    """
     def do_all(self, arg):
         """ Prints string represention of all instances of a given class """
 
@@ -126,7 +105,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
             return
 
-        token = arg.split(' ')
+        token = arg.split()
 
         if token[0] not in theClasses:
             print("** class doesn't exist **")
@@ -141,13 +120,37 @@ class HBNBCommand(cmd.Cmd):
                     newList += [val.__str__()]
             print(newList)
 
-
-
-
-
     def do_update(self, args):
-        pass    
+        """ Updates an instance based on the class name and id """
 
+        if not args:
+            print("** class name missing **")
+            return
+
+        token = args.split()
+
+        if token[0] not in theClasses:
+            print("** class doesn't exist **")
+        elif len(token) == 1:
+            print("** instance id missing **")
+        else:
+            all_objs = storage.all()
+            for key, val in all_objs.items():
+                ob_name = val.__class__.__name__
+                ob_id = val.id
+                #print(val.__class__.__name__)
+                #print(val.id)
+                #time.sleep(2)
+                if ob_name == token[0] and ob_id == token[1]:
+                    if len(token) == 2:
+                        print("** attribute name missing **")
+                    elif len(token) == 3:
+                        print("** value missing **")
+                    else:
+                        setattr(val, token[2], token[3])
+                        storage.save()
+                    return
+            print("** no instance found **")
     
 if __name__ == "__main__":
     console = HBNBCommand()
