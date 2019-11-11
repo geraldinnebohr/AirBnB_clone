@@ -79,6 +79,6 @@ d711be23-73d9-4fbd-92f5-fe9ec7044d6d
 (hbnb)
 ```
 ## Authors
-[Geraldinne "market" Bohorquez] (https://github.com/geraldinnebohr)
+[Geraldinne "market" Bohorquez] (https://github.com/geraldinnebohr)  
 [Hugo "Hache" Trujillo] (https://github.com/hacheG)
 
