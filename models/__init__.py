@@ -12,6 +12,19 @@ from models.review import Review
 storage = FileStorage()
 storage.reload()
 
-theClasses = {'BaseModel': BaseModel, 'User': User, 'Place': Place,
-               'State': State, 'City': City, 'Amenity': Amenity,
-               'Review': Review}
+a = 'BaseModel'
+b = 'User'
+c = 'Place'
+d = 'State'
+e = 'City'
+f = 'Amenity'
+g = 'Review'
+
+a1 = BaseModel
+b1 = User
+c1 = Place
+d1 = State
+e1 = City
+f1 = Amenity
+g1 = Review
+theClasses = {a: a1, b: b1, c: c1, d: d1, e: e1, f: f1, g: g1}

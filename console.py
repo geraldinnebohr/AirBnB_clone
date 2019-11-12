@@ -14,6 +14,7 @@ from models.review import Review
 from models import theClasses
 import cmd
 
+
 class HBNBCommand(cmd.Cmd):
     """
     class HBNB for command lines
@@ -33,6 +34,7 @@ class HBNBCommand(cmd.Cmd):
     def emptyline(self):
         """don't make nothing"""
         pass
+
     def do_create(self, args):
         """creates a new instance"""
         if len(args) == 0:
@@ -48,6 +50,7 @@ class HBNBCommand(cmd.Cmd):
             print(newInstance.id)
         except:
             print("** class doesn't exist **")
+
     def do_show(self, args):
         """Prints the string representation of an instance"""
         token = args.split()
