@@ -134,7 +134,7 @@ class HBNBCommand(cmd.Cmd):
             for key, val in all_objs.items():
                 ob_name = val.__class__.__name__
                 ob_id = val.id
-                if ob_name == token[0] and ob_id == token[1]:
+                if ob_name == token[0] and ob_id == token[1].strip('"'):
                     if len(token) == 2:
                         print("** attribute name missing **")
                     elif len(token) == 3:
