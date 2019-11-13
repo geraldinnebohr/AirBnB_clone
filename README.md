@@ -1,4 +1,3 @@
-dfnjerfbjhefhjnefjnfejefjnfajngfvjgrfrsjngrfnjsjngrbsnj
 ## the HBNB console                                                                                                   
 ----
 Do you remember the Shell? It’s exactly the same but limited to a specific use-case. In our case, we want to be able to manage the objects of our project:
