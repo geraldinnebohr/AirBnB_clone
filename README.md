@@ -1,5 +1,5 @@
                                                                                         
-## Commands and how to use it                                                                                         
+## Commands and how to use it with H and Geral                                                                                       
 the command interpreter allow us to handle our data requirements with the following commands
                                                                                                                       
 | Command | Function |                                                                                                
