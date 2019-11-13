@@ -10,4 +10,5 @@ class TestsFileStorage(unittest.TestCase):
     def test_normal_cases_base_model(self):
         """normal cases"""
         my_object = FileStorage()
-        self.assertEqual(my_object.all, my_object.__objects)
+        my_dict = my_object.all()
+        self.assertIs(type(my_dict), dict)
