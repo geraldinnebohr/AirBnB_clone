@@ -21,16 +21,6 @@ class HBNBCommand(cmd.Cmd):
     """
     prompt = "(hbnb) "
 
-    def do_EOF(self, args):
-        """end_of_file"""
-        print("end of file")
-        return True
-
-    def do_quit(self, args):
-        """Quit command to exit the program"""
-        print("chao bye")
-        return True
-
     def emptyline(self):
         """don't make nothing"""
         pass
@@ -44,9 +34,7 @@ class HBNBCommand(cmd.Cmd):
 
         try:
             newInstance = eval(token[0])()
-            #time.sleep(2)
             newInstance.save()
-            #time.sleep(2)
             print(newInstance.id)
         except:
             print("** class doesn't exist **")
@@ -147,6 +135,14 @@ class HBNBCommand(cmd.Cmd):
                         storage.save()
                     return
             print("** no instance found **")
+
+    def do_EOF(self, args):
+        """end_of_file"""
+        return True
+
+    def do_quit(self, args):
+        """Quit command to exit the program"""
+        return True
 
 if __name__ == "__main__":
     console = HBNBCommand()
