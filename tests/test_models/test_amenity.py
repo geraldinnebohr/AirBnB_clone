@@ -11,6 +11,10 @@ from models import storage
 
 class TestsAmenity(unittest.TestCase):
 
+    def setUp(self):
+        """set initial"""
+        name = ""
+
     def test_normal_cases_amenity(self):
         """normal cases"""
         my_object = Amenity()
@@ -24,6 +28,7 @@ class TestsAmenity(unittest.TestCase):
         self.assertEqual(isinstance(my_object.created_at, datetime), True)
         self.assertEqual(isinstance(my_object.updated_at, datetime), True)
         self.assertEqual(type(my_object.__dict__), dict)
+
 
 if __name__ == "__main__":
     unittest.main()
