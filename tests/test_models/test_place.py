@@ -4,6 +4,7 @@
 
 import unittest
 from models.place import Place
+from models.base_model import BaseModel
 from datetime import datetime
 from uuid import UUID
 from models import storage
@@ -40,6 +41,10 @@ class TestsBaseModel(unittest.TestCase):
         self.assertEqual(isinstance(my_object.created_at, datetime), True)
         self.assertEqual(isinstance(my_object.updated_at, datetime), True)
         self.assertEqual(type(my_object.__dict__), dict)
+
+    def test_subclass(self):
+        """test if class is subclass"""
+        self.assertEqual(issubclass(Place, BaseModel), True)
 
 if __name__ == "__main__":
     unittest.main()
