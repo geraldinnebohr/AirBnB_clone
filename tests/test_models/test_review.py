@@ -4,6 +4,7 @@
 
 import unittest
 from models.review import Review
+from models.base_model import BaseModel
 from datetime import datetime
 from uuid import UUID
 from models import storage
@@ -11,6 +12,9 @@ from models import storage
 
 class TestsBaseModel(unittest.TestCase):
     """class test base model for unittest"""
+    
+    obj = Review()
+
     def seUp(self):
         """set initial"""
         place_id = ""
@@ -30,6 +34,16 @@ class TestsBaseModel(unittest.TestCase):
         self.assertEqual(isinstance(my_object.created_at, datetime), True)
         self.assertEqual(isinstance(my_object.updated_at, datetime), True)
         self.assertEqual(type(my_object.__dict__), dict)
+
+    def test_subclass(self):
+        """test if class is subclass"""
+        self.assertEqual(issubclass(Review, BaseModel), True)
+	
+    def test_type(self):
+        """test type of object"""
+        self.assertEqual(type(self.obj.place_id), str)
+        self.assertEqual(type(self.obj.user_id), str)
+        self.assertEqual(type(self.obj.text), str)
 
 if __name__ == "__main__":
     unittest.main()
