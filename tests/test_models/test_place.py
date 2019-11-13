@@ -14,10 +14,13 @@ class TestsBaseModel(unittest.TestCase):
     """
     class for unit testing
     """
+
+    obj = Place()
+
     def setUp(self):
         """set initial"""
         city_id = ""
-        user_id = ""
+        user_id= ""
         name = ""
         description = ""
         number_rooms = 0
@@ -45,6 +48,20 @@ class TestsBaseModel(unittest.TestCase):
     def test_subclass(self):
         """test if class is subclass"""
         self.assertEqual(issubclass(Place, BaseModel), True)
+
+    def test_type(self):
+        """test type of object"""
+        self.assertEqual(type(self.obj.city_id), str)
+        self.assertEqual(type(self.obj.user_id), str)
+        self.assertEqual(type(self.obj.name), str)
+        self.assertEqual(type(self.obj.description), str)
+        self.assertEqual(type(self.obj.number_rooms), int)
+        self.assertEqual(type(self.obj.number_bathrooms), int)
+        self.assertEqual(type(self.obj.max_guest), int)
+        self.assertEqual(type(self.obj.price_by_night), int)
+        self.assertEqual(type(self.obj.latitude), float)
+        self.assertEqual(type(self.obj.longitude), float)
+        self.assertEqual(type(self.obj.amenity_ids), list)
 
 if __name__ == "__main__":
     unittest.main()
