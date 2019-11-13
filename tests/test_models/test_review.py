@@ -10,6 +10,12 @@ from models import storage
 
 
 class TestsBaseModel(unittest.TestCase):
+    """class test base model for unittest"""
+    def seUp(self):
+        """set initial"""
+        place_id = ""
+        user_id = ""
+        text = ""
 
     def test_normal_cases_review(self):
         """normal cases"""

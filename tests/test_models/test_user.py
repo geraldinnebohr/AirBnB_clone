@@ -10,6 +10,13 @@ from models import storage
 
 
 class TestsUser(unittest.TestCase):
+    """class test user"""
+    def setUp(self):
+        """set initial"""
+        email = ""
+        password = ""
+        first_name = ""
+        last_name = ""
 
     def test_normal_cases_user(self):
         """normal cases"""
