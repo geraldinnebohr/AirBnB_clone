@@ -10,6 +10,22 @@ from models import storage
 
 
 class TestsBaseModel(unittest.TestCase):
+    """
+    class for unit testing
+    """
+    def setUp(self):
+        """set initial"""
+        city_id = ""
+        user_id = ""
+        name = ""
+        description = ""
+        number_rooms = 0
+        number_bathrooms = 0
+        max_guest = 0
+        price_by_night = 0
+        latitude = 0.0
+        longitude = 0.0
+        amenity_ids = []
 
     def test_normal_cases_place(self):
         """normal cases"""

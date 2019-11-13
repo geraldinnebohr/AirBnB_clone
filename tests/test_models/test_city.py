@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""Unittests for base model class"""
-
-
+"""
+Unittests for base model class
+"""
 import unittest
 from models.city import City
 from datetime import datetime
@@ -11,7 +11,12 @@ from models import storage
 
 class TestsCity(unittest.TestCase):
 
-    def test_normal_cases_city(self):
+    def setUp(self):
+        """set initial"""
+        name = ""
+        state_id = ""
+
+    def test_normal(self):
         """normal cases"""
         my_object = City()
         my_object.name = "Holbiland"
