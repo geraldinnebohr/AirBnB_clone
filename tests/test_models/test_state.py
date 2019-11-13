@@ -8,6 +8,7 @@ from datetime import datetime
 from uuid import UUID
 from models import storage
 
+
 class TestsBaseModel(unittest.TestCase):
 
     def test_normal_cases_state(self):
