@@ -24,3 +24,6 @@ class TestsBaseModel(unittest.TestCase):
         self.assertEqual(isinstance(my_object.created_at, datetime), True)
         self.assertEqual(isinstance(my_object.updated_at, datetime), True)
         self.assertEqual(type(my_object.__dict__), dict)
+
+if __name__ == "__main__":
+    unittest.main()
