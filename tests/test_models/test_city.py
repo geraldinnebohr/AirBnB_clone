@@ -11,6 +11,8 @@ from models import storage
 
 
 class TestsCity(unittest.TestCase):
+    
+    obj = City()
 
     def setUp(self):
         """set initial"""
@@ -34,6 +36,12 @@ class TestsCity(unittest.TestCase):
     def test_subclass(self):
         """test if class is subclass"""
         self.assertEqual(issubclass(City, BaseModel), True)
+    
+    def test_type(self):
+        """test type of object"""
+        self.assertEqual(type(self.obj.name), str)
+        self.assertEqual(type(self.obj.state_id), str)
+	
 
 if __name__ == "__main__":
     unittest.main()

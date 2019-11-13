@@ -12,6 +12,8 @@ from models import storage
 
 class TestsAmenity(unittest.TestCase):
 
+    obj = Amenity()
+
     def setUp(self):
         """set initial"""
         name = ""
@@ -33,6 +35,11 @@ class TestsAmenity(unittest.TestCase):
     def test_subclass(self):
         """test if class is subclass"""
         self.assertEqual(issubclass(Amenity, BaseModel), True)
+
+    def test_type(self):
+        """test type of object"""
+        obj = Amenity()
+        self.assertEqual(type(self.obj.name), str)
 
 if __name__ == "__main__":
     unittest.main()
