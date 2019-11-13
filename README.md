@@ -1,9 +1,8 @@
-<z.,mxzcljkdsczx knvjlzñcjzñadscxzk{dsk
 ## Commands and how to use it                                                                                     
 the command interpreter allow us to handle our data requirements with the following commands
                                                                                                                       
 | Command | Function |                                                                                                
-| ------- | -------- |
+| ------- | ------------------------------------ |
 | create | create a new instace of a class |
 | show | show the info of an instance of a class |
 | destroy | destroy a instance of a class |
